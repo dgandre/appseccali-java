@@ -30,10 +30,10 @@ public class CacheManager implements Serializable {
 		
 		oos.writeObject(cm);
 		
-		// test deserialization
-//		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
-//		ObjectInputStream ois = new ObjectInputStream(in);
-//		ois.readObject(); 
+	   // test deserialization
+	   ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
+	   ObjectInputStream ois = new ObjectInputStream(in);
+	   ois.readObject(); 
 		
 		System.out.println(new String(Base64.getEncoder().encode(out.toByteArray())));
 	}
